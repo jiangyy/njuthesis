@@ -1,0 +1,111 @@
+# 论文信息和设置
+# 修改后运行run.py更新。需要关闭LyX文档再打开以生效。
+
+# 排版设置
+font-song: SimSun     # 宋体(正文)字体
+font-hei: SimHei      # 黑体(粗体)字体
+font-kai: KaiTi       # 楷体(斜体)字体
+add-to-preamble: |    # LaTeX导言区加入定制内容
+    % \setmainfont{Palatino} % Roman
+    % \setsansfont{Arial} % Sans Serif 
+    \usepackage{tikz}
+    \usepackage{pgfplots}
+    \usepackage{xcolor}
+    \usepackage{hyperref}
+
+# 论文信息
+degree-cn: 博士
+degree-en: Doctor of Philosophy
+title-cn: 南京大学山寨LaTeX毕业论文模版。如果有一个很长的标题会是怎么样呢？这个标题真的可能非常非常长……
+title-en: English Title (Can be Very Very Very Very Very Very Very Very Very Very Very Very Long)
+author-cn: 名字
+author-en: Name
+supervisor-cn: 导师
+supervisor-en: Supervisor
+date-cn: 2000年1月1日
+date-en: June 1, 2000
+
+# 其他信息
+xuehao: DG1234567  # 学号
+grade: 9999 # 博士入学年级
+defense-date: 2000年1月1日  # 答辩日期
+subject-cn: 专业名称 # 专业名称
+subject-en: ????
+direction-cn: 研究方向 # 研究方向
+wheresubmit-en: the graduate school of Nanjing University # submitted to ...
+department-en: Department of Computer Science and Technology # 院系
+
+# 中文摘要关键字，可使用LaTeX代码
+abstract-cn: |
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+
+    可以有若干行。
+
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
+
+keywords-cn: 关键词1；关键词2
+
+# 英文摘要关键字，可使用LaTeX代码
+abstract-en: |
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+    This is english abstract.
+keywords-en: Some Thing, Another Thing

@@ -1,0 +1,296 @@
+#% Do not delete the line below; configure depends on this
+#  \DeclareLaTeXClass[book]{NJU Thesis}
+#  \DeclareCategory{Books}
+# NJU Thesis
+# Based on the LyX Book class.
+# Author: Yanyan Jiang <jiangyy@outlook.com>
+
+Format 60
+
+Input book.layout
+
+Style Chapter
+    Category Sectioning
+    LabelType Static
+    LabelString "第\thechapter章　"
+    Align Center
+    Font
+        Series Bold
+        Size Huge
+    End
+    TocLevel 0
+    TopSep 1
+    BottomSep 0.8
+    ParSep 0.8
+    NextNoIndent 0
+End
+
+Style Section
+    NextNoIndent 0
+End
+
+Style Subsection
+    NextNoIndent 0
+End
+
+Style Subsubsection
+    NextNoIndent 0
+End
+
+
+
+AddToPreamble
+
+%%%%%%%%%% 页面设置 %%%%%%%%%%
+
+\usepackage[paper=a4paper]{geometry}
+
+\geometry{headheight=2.6cm,headsep=3mm,footskip=13mm} % 纸张
+\geometry{top=3.5cm,bottom=3.5cm,left=3.2cm,right=3.2cm}
+
+\renewcommand{\baselinestretch}{1.30} % 行距
+
+
+%%%%%%%%%% 中文字体 %%%%%%%%%%
+\usepackage{xeCJK}
+
+\newcommand{\SongTi}{-{{- font-song -}}-}
+\newcommand{\HeiTi}{-{{- font-hei -}}-}
+\newcommand{\KaiTi}{-{{- font-kai -}}-}
+
+\setCJKfamilyfont{SongTi}{\SongTi}
+\setCJKfamilyfont{HeiTi}{\HeiTi}
+\setCJKfamilyfont{KaiTi}{\KaiTi}
+
+\setCJKmainfont[BoldFont={\HeiTi},ItalicFont={\KaiTi}]{\SongTi}
+\setCJKsansfont{\HeiTi}
+\setCJKmonofont{\KaiTi}
+
+\newcommand*{\useHeiTi}{\CJKfamily{HeiTi}}
+\newcommand*{\useSongTi}{\CJKfamily{SongTi}}
+\newcommand*{\useKaiTi}{\CJKfamily{KaiTi}}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2.42em}
+
+
+%%%%%%%%%% 标题/目录 %%%%%%%%%%
+\usepackage{titlesec}
+
+% 标题编号
+\newcommand{\CJKnumber}[1]{\ifcase#1\or{一}\or{二}\or{三}\or{四}\or{五}\or{六}\or{七}\or{八}\or{九}\or{十}\fi}
+\renewcommand\chaptername{
+    \if@mainmatter{第\CJKnumber{\thechapter}章}\fi%
+}
+\newcommand{\dotspace}{\hspace{0.1em}} % 1.2那个点后面的间距
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\dotspace\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\dotspace\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\dotspace\arabic{subsubsection}}
+
+% 标题格式
+\titleformat{\chapter}[hang]{\centering\bfseries\Large}{第\CJKnumber{\thechapter}章}{1em}{}
+\titleformat{\section}[hang]{\bfseries\large}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]{\bfseries\tinylarge}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[hang]{\bfseries\normalsize}{\thesubsubsection}{1em}{}
+
+% 标题行距
+\titlespacing{\chapter}{0pt}{*1.0}{*2.0}
+
+% 图/表名称
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\bibname}{参考文献}
+
+% 目录设置
+\setcounter{tocdepth}{2}
+\newcommand{\dotsep}{5mu} % 目录点之间的距离
+\def\@dottedtocline#1#2#3#4#5{%
+  \ifnum #1>\c@tocdepth \else
+    \vskip \z@ \@plus.2\p@
+    {\leftskip #2\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+     \parindent #2\relax\@afterindenttrue
+     \interlinepenalty\@M
+     \leavevmode
+     \@tempdima #3\relax
+     \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+     {#4}\nobreak
+     \leaders\hbox{$\m@th\mkern \dotsep\cdot\mkern \dotsep$}\hfill
+     \nobreak
+     \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor #5}%
+     \par}%
+  \fi}
+\renewcommand*{\l@chapter}[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{-\@highpenalty}%
+    \vskip 1.0em \@plus\p@
+    \setlength\@tempdima{1.5em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak
+      \leaders\hbox{$\m@th\mkern \dotsep\cdot\mkern \dotsep$}
+      \hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+      \penalty\@highpenalty
+    \endgroup
+  \fi}
+
+\newcommand\nchapter[1]{%
+    \if@mainmatter%
+        \@mainmatterfalse%
+        \chapter{#1}%
+        \@mainmattertrue%
+    \else
+        \chapter{#1}%
+    \fi
+}
+\renewcommand{\tableofcontents}{\nchapter{目\hspace{2em}录}\@starttoc{toc}}
+\renewcommand{\listoftables}{\nchapter{附表清单}\@starttoc{lot}}
+\renewcommand{\listoffigures}{\nchapter{插图清单}\@starttoc{lof}}
+
+%%%%%%%%%% 页眉页脚(先置空) %%%%%%%%%%
+\usepackage{fancyhdr}
+\fancyfoot{}
+\fancyhead{}
+\pagestyle{empty}
+
+
+%%%%%%%%%% 字号设置(从NJU/NJUT模版偷来的) %%%%%%%%%%
+% 为什么这么长...?
+\newcommand*{\njut@fs@eight}{5.02} % 八号字 5bp
+\newcommand*{\njut@fs@eightskip}{6.02}
+\newcommand*{\njut@fs@seven}{5.52} % 七号字 5.5bp
+\newcommand*{\njut@fs@sevenskip}{6.62}
+\newcommand*{\njut@fs@ssix}{6.52} % 小六号 6.5bp
+\newcommand*{\njut@fs@ssixskip}{7.83}
+\newcommand*{\njut@fs@six}{7.53} % 六号字 7.5bp
+\newcommand*{\njut@fs@sixskip}{9.03}
+\newcommand*{\njut@fs@sfive}{9.03} % 小五号 9bp
+\newcommand*{\njut@fs@sfiveskip}{10.84}
+\newcommand*{\njut@fs@five}{10.54} % 五号 10bp
+\newcommand*{\njut@fs@fiveskip}{12.65}
+\newcommand*{\njut@fs@sfour}{12.05} % 小四号 12bp
+\newcommand*{\njut@fs@sfourskip}{14.45}
+\newcommand*{\njut@fs@four}{14.05} % 四号字 14bp
+\newcommand*{\njut@fs@fourskip}{16.86}
+\newcommand*{\njut@fs@sthree}{15.06} % 小三号 15bp
+\newcommand*{\njut@fs@sthreeskip}{18.07}
+\newcommand*{\njut@fs@three}{16.06} % 三号字 16bp
+\newcommand*{\njut@fs@threeskip}{19.27}
+\newcommand*{\njut@fs@stwo}{18.07} % 小二号 18bp
+\newcommand*{\njut@fs@stwoskip}{21.68}
+\newcommand*{\njut@fs@two}{22.08} % 二号字 22bp
+\newcommand*{\njut@fs@twoskip}{26.50}
+\newcommand*{\njut@fs@sone}{24.09} % 小一号 24bp
+\newcommand*{\njut@fs@soneskip}{28.91}
+\newcommand*{\njut@fs@one}{26.10} % 一号字 26bp
+\newcommand*{\njut@fs@oneskip}{31.32}
+\newcommand*{\njut@fs@szero}{36.14} % 小初号 36bp
+\newcommand*{\njut@fs@szeroskip}{43.36}
+\newcommand*{\njut@fs@zero}{42.16} % 初号字 42bp
+\newcommand*{\njut@fs@zeroskip}{50.59}
+\DeclareMathSizes{\njut@fs@eight} {\njut@fs@eight} {5} {5}
+\DeclareMathSizes{\njut@fs@seven} {\njut@fs@seven} {5} {5}
+\DeclareMathSizes{\njut@fs@ssix} {\njut@fs@ssix} {5} {5}
+\DeclareMathSizes{\njut@fs@six} {\njut@fs@six} {5} {5}
+\DeclareMathSizes{\njut@fs@sfive} {\njut@fs@sfive} {6} {5}
+\DeclareMathSizes{\njut@fs@five} {\njut@fs@five} {7} {5}
+\DeclareMathSizes{\njut@fs@sfour} {\njut@fs@sfour} {8} {6}
+\DeclareMathSizes{\njut@fs@four} {\njut@fs@four} {\njut@fs@five} {\njut@fs@six}
+\DeclareMathSizes{\njut@fs@sthree} {\njut@fs@sthree} {\njut@fs@sfour} {\njut@fs@sfive}
+\DeclareMathSizes{\njut@fs@three} {\njut@fs@three} {\njut@fs@four} {\njut@fs@five}
+\DeclareMathSizes{\njut@fs@stwo} {\njut@fs@stwo} {\njut@fs@sthree} {\njut@fs@sfour}
+\DeclareMathSizes{\njut@fs@two} {\njut@fs@two} {\njut@fs@three} {\njut@fs@four}
+\DeclareMathSizes{\njut@fs@sone} {\njut@fs@sone} {\njut@fs@stwo} {\njut@fs@sthree}
+\DeclareMathSizes{\njut@fs@one} {\njut@fs@one} {\njut@fs@two} {\njut@fs@three}
+\DeclareMathSizes{\njut@fs@szero} {\njut@fs@szero} {\njut@fs@sone} {\njut@fs@stwo}
+\DeclareMathSizes{\njut@fs@zero} {\njut@fs@zero} {\njut@fs@one} {\njut@fs@two}
+\def\njut@zihao{}
+\DeclareRobustCommand*{\zihao}[1]{%
+  \def\njut@zihao{#1}%
+  \ifnum #11<0%
+    \@tempcnta=-#1
+    \ifcase\@tempcnta%
+        \fontsize\njut@fs@szero\njut@fs@szeroskip%
+    \or \fontsize\njut@fs@sone\njut@fs@soneskip%
+    \or \fontsize\njut@fs@stwo\njut@fs@stwoskip%
+    \or \fontsize\njut@fs@sthree\njut@fs@sthreeskip%
+    \or \fontsize\njut@fs@sfour\njut@fs@sfourskip%
+    \or \fontsize\njut@fs@sfive\njut@fs@sfiveskip%
+    \or \fontsize\njut@fs@ssix\njut@fs@ssixskip%
+    \else \ClassError{njuthesis}{%
+            Undefined Chinese font size in command \protect\zihao}{%
+            The old font size is used if you continue.}%
+    \fi%
+  \else%
+    \@tempcnta=#1
+    \ifcase\@tempcnta%
+        \fontsize\njut@fs@zero\njut@fs@zeroskip%
+    \or \fontsize\njut@fs@one\njut@fs@oneskip%
+    \or \fontsize\njut@fs@two\njut@fs@twoskip%
+    \or \fontsize\njut@fs@three\njut@fs@threeskip%
+    \or \fontsize\njut@fs@four\njut@fs@fourskip%
+    \or \fontsize\njut@fs@five\njut@fs@fiveskip%
+    \or \fontsize\njut@fs@six\njut@fs@sixskip%
+    \or \fontsize\njut@fs@seven\njut@fs@sevenskip%
+    \or \fontsize\njut@fs@eight\njut@fs@eightskip%
+    \else \ClassError{njuthesis}{%
+            Undefined Chinese font size in command \protect\zihao}{%
+            The old font size is used if you continue.}%
+    \fi%
+  \fi%
+  \selectfont\ignorespaces}
+\renewcommand{\tiny}{% 小六号 6.5bp
+  \@setfontsize\tiny{\njut@fs@ssix}{\njut@fs@ssixskip}}
+\renewcommand{\scriptsize}{% 六号字 7.5bp
+  \@setfontsize\scriptsize{\njut@fs@six}{\njut@fs@sixskip}}
+\renewcommand{\footnotesize}{% 小五号 9bp
+  \@setfontsize\footnotesize{\njut@fs@sfive}{\njut@fs@sfiveskip}%
+  \abovedisplayskip 6\p@ \@plus2\p@ \@minus4\p@
+  \abovedisplayshortskip \z@ \@plus\p@
+  \belowdisplayshortskip 3\p@ \@plus\p@ \@minus2\p@
+  \def\@listi{\leftmargin\leftmargini
+    \topsep 3\p@ \@plus\p@ \@minus\p@
+    \parsep 2\p@ \@plus\p@ \@minus\p@
+    \itemsep \parsep}%
+  \belowdisplayskip \abovedisplayskip}
+\renewcommand{\small}{% 五号 10bp
+  \@setfontsize\small{\njut@fs@five}{\njut@fs@fiveskip}%
+  \abovedisplayskip 8.5\p@ \@plus3\p@ \@minus4\p@
+  \abovedisplayshortskip \z@ \@plus2\p@
+  \belowdisplayshortskip 4\p@ \@plus2\p@ \@minus2\p@
+  \def\@listi{\leftmargin\leftmargini
+    \topsep 4\p@ \@plus2\p@ \@minus2\p@
+    \parsep 2\p@ \@plus\p@ \@minus\p@
+    \itemsep \parsep}%
+  \belowdisplayskip \abovedisplayskip}
+\renewcommand{\normalsize}{% 小四号 12bp
+  \@setfontsize\normalsize{\njut@fs@sfour}{\njut@fs@sfourskip}%
+  \abovedisplayskip 10\p@ \@plus2\p@ \@minus5\p@
+  \abovedisplayshortskip \z@ \@plus3\p@
+  \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+  \belowdisplayskip \abovedisplayskip
+  \let\@listi\@listI}
+\newcommand{\tinylarge}{% 四号
+  \@setfontsize\large{\njut@fs@four}{\njut@fs@fourskip}}
+\renewcommand{\large}{% 小三号 15bp
+  \@setfontsize\large{\njut@fs@sthree}{\njut@fs@sthreeskip}}
+\renewcommand{\Large}{% 小二号 18bp
+  \@setfontsize\Large{\njut@fs@stwo}{\njut@fs@stwoskip}}
+\renewcommand{\LARGE}{% 小一号 24bp
+  \@setfontsize\LARGE{\njut@fs@sone}{\njut@fs@soneskip}}
+\renewcommand{\huge}{% 一号 26bp
+  \@setfontsize\huge{\njut@fs@one}{\njut@fs@oneskip}}
+\renewcommand{\Huge}{% 小初号 36bp
+  \@setfontsize\Huge{\njut@fs@szero}{\njut@fs@szeroskip}}
+
+% Caption字体
+\usepackage{caption}
+\DeclareCaptionFormat{plain}{\useHeiTi{\small \textbf{#1}#2#3}}
+
+-{{- add-to-preamble -}}-
+
+EndPreamble

@@ -1,0 +1,131 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ../build/thesis
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding utf8-plain
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+使用手册
+\end_layout
+
+\begin_layout Section
+使用说明
+\end_layout
+
+\begin_layout Subsection
+安装环境
+\end_layout
+
+\begin_layout Standard
+运行需要：
+\end_layout
+
+\begin_layout Enumerate
+能正常编译文档的LyX。
+\end_layout
+
+\begin_layout Enumerate
+能被LyX正常调用的xelatex，以及各种所需宏包。
+\end_layout
+
+\begin_layout Enumerate
+能在命令行运行的python，以及yaml包。
+\end_layout
+
+\begin_layout Standard
+很抱歉，我们不会装电脑，也不会用Windows。遇到问题只能自己解决啦。
+\end_layout
+
+\begin_layout Section
+常见问题
+\end_layout
+
+\begin_layout Subsection
+``图''和``表''显示为``Figure''和``Table''。
+\end_layout
+
+\begin_layout Standard
+LyX默认会在Preamble的最后添加一个对babel宏包的引用，将Document 
+\begin_inset Formula $\to$
+\end_inset
+
+ Settings 
+\begin_inset Formula $\to$
+\end_inset
+
+ Language 
+\begin_inset Formula $\to$
+\end_inset
+
+ Language package设置成None即可。
+\end_layout
+
+\end_body
+\end_document
