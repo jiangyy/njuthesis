@@ -79,6 +79,196 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{thmzh}{定理}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewenvironment{thm}{
+\backslash
+begin{thmzh}}{
+\backslash
+end{thmzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thethmzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{thmzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{defnzh}{定义}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewenvironment{defn}{
+\backslash
+begin{defnzh}}{
+\backslash
+end{defnzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thedefnzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{defnzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{corzh}{推论}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewenvironment{cor}{
+\backslash
+begin{corzh}}{
+\backslash
+end{corzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thecorzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{corzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{lemzh}{引理}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewenvironment{lem}{
+\backslash
+begin{lemzh}}{
+\backslash
+end{lemzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thelemzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{lemzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+proofname}{证明}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Note Note
 status open
 

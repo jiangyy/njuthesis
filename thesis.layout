@@ -8,6 +8,8 @@
 Format 60
 
 Input book.layout
+Input theorems-ams.module
+ProvidesModule theorems-ams
 
 Style Chapter
     Category Sectioning
@@ -37,8 +39,6 @@ Style Subsubsection
     NextNoIndent 0
 End
 
-ProvidesModule theorems-ams
-Input theorems-ams.module
 
 AddToPreamble
 
