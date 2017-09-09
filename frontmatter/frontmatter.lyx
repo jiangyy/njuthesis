@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass ../build/thesis
+\textclass thesis
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -81,10 +81,6 @@
 \begin_layout Standard
 \begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 
@@ -248,6 +244,48 @@ thelemzh}{
 arabic{chapter}.
 \backslash
 arabic{lemzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtheorem{conjecturezh}{猜想}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewenvironment{conjecture}{
+\backslash
+begin{conjecturezh}}{
+\backslash
+end{conjecturezh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+theconjecturezh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{conjecturezh}}
 \end_layout
 
 \begin_layout Plain Layout
