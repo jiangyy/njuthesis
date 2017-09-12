@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass ../build/thesis
+\textclass thesis
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -272,13 +272,9 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
--{{- abstract-cn -}}-
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../abstract-cn.lyx"
 
 \end_inset
 
@@ -467,13 +463,9 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
--{{- abstract-en -}}-
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename "../abstract-en.lyx"
 
 \end_inset
 
