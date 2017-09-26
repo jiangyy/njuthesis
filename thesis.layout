@@ -91,9 +91,9 @@ AddToPreamble
 
 % 标题格式
 \titleformat{\chapter}[hang]{\centering\bfseries\Large}{第\CJKnumber{\thechapter}章}{1em}{}
-\titleformat{\section}[hang]{\bfseries\large}{\thesection}{1em}{}
-\titleformat{\subsection}[hang]{\bfseries\tinylarge}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}[hang]{\bfseries\normalsize}{\thesubsubsection}{1em}{}
+\titleformat{\section}[hang]{\bfseries\large}{\thesection}{0.75em}{}
+\titleformat{\subsection}[hang]{\bfseries\tinylarge}{\thesubsection}{0.75em}{}
+\titleformat{\subsubsection}[hang]{\bfseries\normalsize}{\thesubsubsection}{0.75em}{}
 
 % 标题行距
 \titlespacing{\chapter}{0pt}{*1.0}{*2.0}
@@ -291,6 +291,30 @@ AddToPreamble
 % Caption字体
 \usepackage{caption}
 \DeclareCaptionFormat{plain}{\useHeiTi{\small \textbf{#1}#2#3}}
+
+% 代码列表
+\usepackage{listings}
+\lstset{
+  basicstyle=\linespread{0.95}\ttfamily\small,
+  keywordstyle={\color{blue}},
+  stringstyle={\color{magenta}},
+  identifierstyle={\color{black!90}},
+  commentstyle={\color{olive}},
+  basewidth={0.55em, 0.5em},
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle={\small},
+  numbersep=7pt,
+}
+
+% 算法
+\usepackage[linesnumbered, boxed, vlined, resetcount, algochapter]{algorithm2e}
+\renewcommand{\algorithmcfname}{算法}
+
+% 其他宏包
+\usepackage{xcolor} % 颜色
+\usepackage{hyperref} % 超链接
 
 -{{- add-to-preamble -}}-
 
