@@ -312,9 +312,12 @@ AddToPreamble
 \usepackage[linesnumbered, boxed, vlined, resetcount, algochapter]{algorithm2e}
 \renewcommand{\algorithmcfname}{算法}
 
+% 脚注
+\usepackage{perpage}
+\MakePerPage[1]{footnote}
+
 % 其他宏包
 \usepackage{xcolor} % 颜色
-\usepackage{hyperref} % 超链接
 
 -{{- add-to-preamble -}}-
 

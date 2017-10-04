@@ -10,8 +10,6 @@ add-to-preamble: |    # LaTeX导言区加入定制内容
     % \setsansfont{Arial} % Sans Serif 
     \usepackage{tikz}
     \usepackage{pgfplots}
-    \usepackage{xcolor}
-    \usepackage{hyperref}
 
 # 论文信息
 degree-cn: 博士
@@ -27,7 +25,7 @@ date-en: June 1, 2000
 
 # 其他信息
 xuehao: DG1234567  # 学号
-grade: 9999 # 博士入学年级
+grade: 9999 # 入学年级
 defense-date: 2000年1月1日  # 答辩日期
 subject-cn: 专业名称 # 专业名称
 subject-en: ????
@@ -35,77 +33,6 @@ direction-cn: 研究方向 # 研究方向
 wheresubmit-en: the graduate school of Nanjing University # submitted to ...
 department-en: Department of Computer Science and Technology # 院系
 
-# 中文摘要关键字，可使用LaTeX代码
-abstract-cn: |
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-
-    可以有若干行。
-
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-    中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。 中文摘要。
-
+# 中文/英文关键字
 keywords-cn: 关键词1；关键词2
-
-# 英文摘要关键字，可使用LaTeX代码
-abstract-en: |
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
-    This is english abstract.
 keywords-en: Some Thing, Another Thing

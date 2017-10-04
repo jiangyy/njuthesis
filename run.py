@@ -24,7 +24,5 @@ def gen(fname):
     with open("build/%s" % fname, "w") as fp:
         fp.write(contents.encode('utf-8'))
 
-gen('thesis.layout')
-gen('titlepage.lyx')
-gen('abstract.lyx')
-gen('frontmatter.lyx')
+for f in ['thesis.layout', 'titlepage.lyx', 'abstract.lyx', 'frontmatter.lyx']:
+    gen(f)
