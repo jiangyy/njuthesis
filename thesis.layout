@@ -316,8 +316,17 @@ AddToPreamble
 \usepackage{perpage}
 \MakePerPage[1]{footnote}
 
+% 枚举环境间距
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+
 % 其他宏包
 \usepackage{xcolor} % 颜色
+
+\widowpenalty=10000
+\clubpenalty=10000
 
 -{{- add-to-preamble -}}-
 
