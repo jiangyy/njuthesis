@@ -306,11 +306,13 @@ AddToPreamble
   numbers=left,
   numberstyle={\small},
   numbersep=7pt,
+  belowskip=0pt,
 }
 
 % 算法
 \usepackage[linesnumbered, boxed, vlined, resetcount, algochapter]{algorithm2e}
 \renewcommand{\algorithmcfname}{算法}
+\SetAlgoSkip{}
 
 % 脚注
 \usepackage{perpage}
@@ -318,9 +320,9 @@ AddToPreamble
 
 % 枚举环境间距
 \usepackage{enumitem}
-\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
-\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
-\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=3pt}
+\setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=3pt}
+\setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsepi=3pt}
 
 % 其他宏包
 \usepackage{xcolor} % 颜色
