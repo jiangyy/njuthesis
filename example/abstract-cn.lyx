@@ -8,7 +8,7 @@
 \use_default_options true
 \maintain_unincluded_children false
 \language english
-\language_package none
+\language_package default
 \inputencoding utf8-plain
 \fontencoding global
 \font_roman "default" "default"
@@ -22,7 +22,7 @@
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
-\use_dash_ligatures true
+\use_dash_ligatures false
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -53,11 +53,6 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
-\branch test
-\selected 0
-\filename_suffix 0
-\color #faf0e6
-\end_branch
 \index Index
 \shortcut idx
 \color #008000
@@ -71,7 +66,7 @@
 \quotes_style english
 \dynamic_quotes 0
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -83,85 +78,7 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-注意：需要先运行run.py脚本
-\end_layout
-
-\begin_layout Plain Layout
-脚本会生成：
-\end_layout
-
-\begin_layout Plain Layout
-1.
- build/thesis.layout，LyX格式文件
-\end_layout
-
-\begin_layout Plain Layout
-2.
- build/xxx.lyx，包含标题页和摘要页
-\end_layout
-
-\begin_layout Plain Layout
-全局宏定可以定义在一个公共文件，然后在每个引用宏的文件里input。
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "../build/frontmatter.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "chap1.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "chap2.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset bibtex
-LatexCommand bibtex
-bibfiles "thesis"
-options "bibtotoc,plain"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand input
-filename "backmatter.lyx"
-
-\end_inset
-
-
+中文摘要
 \end_layout
 
 \end_body

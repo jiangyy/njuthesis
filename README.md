@@ -1,6 +1,6 @@
 # 南京大学山寨LyX毕业论文模板
 
-> 因为作者正在调整毕业论文，所以模版正在修改中，example无法编译请谅解！
+> 目前只在Linux和MacOS上完成测试。目测Cygwin应该没问题，其他同学对不起了。
 
 宗旨：**去你麻痹的国家标准**。
 
@@ -8,14 +8,15 @@
 
 p.s. 真佩服论文模版的原始作者njut的dalao能完成如此浩大的工程……
 
+
 ## 使用方法
 
 确定以下内容已安装：
 
 1. LyX (>= 2.2);
 2. 能在命令行中使用的xelatex (macOS/Linux/Cygwin均支持);
-3. 中文字体。可以在`thesis.yaml`中设置，模版使用的是Windows系字体;
-4. Python (with yaml)。
+3. 中文字体。可以在`thesis.yaml`中设置，模版使用的是Windows系字体(SimSun, SimHei, KaiTi);
+4. Python3 (with pyyaml)。
 
 使用前首先在`thesis.yaml`中进行设置，然后运行run.py生成必要的文件，在LyX中编辑论文。
 

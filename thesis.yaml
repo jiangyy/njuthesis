@@ -1,6 +1,9 @@
 # 论文信息和设置
 # 修改后运行run.py更新。需要关闭LyX文档再打开以生效。
 
+# 目录设置
+directory: ./example/ # 论文所在工作目录
+
 # 排版设置
 font-song: SimSun     # 宋体(正文)字体
 font-hei: SimHei      # 黑体(粗体)字体
