@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -50,6 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -58,7 +61,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -976,10 +982,31 @@ reference "tab:2"
 \begin_inset CommandInset citation
 LatexCommand cite
 key "knuth_tex_1990"
+literal "true"
 
 \end_inset
 
  (注意这里使用了protected space防止引用被换到下一行)。由于参考文献列表在主文档中生成，所以单独编译此文件时将会看到无法解析的文件引用。
+\end_layout
+
+\begin_layout Section
+定理/证明环境
+\end_layout
+
+\begin_layout Lemma
+引理1
+\end_layout
+
+\begin_layout Proof
+Trivial。
+\end_layout
+
+\begin_layout Theorem
+定理1
+\end_layout
+
+\begin_layout Proof
+Trivial。
 \end_layout
 
 \end_body

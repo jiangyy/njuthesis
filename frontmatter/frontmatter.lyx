@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -50,6 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -65,7 +68,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 2em
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -99,19 +105,33 @@ status open
 
 
 \backslash
-theoremstyle{plain}
+makeatletter
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
+@ifundefined{thm}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
 newtheorem{thmzh}{定理}[chapter]
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewenvironment{thm}{
 \backslash
@@ -122,7 +142,7 @@ end{thmzh}}
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewcommand{
 \backslash
@@ -135,25 +155,33 @@ arabic{thmzh}}
 
 \begin_layout Plain Layout
 
+}
 \end_layout
 
 \begin_layout Plain Layout
 
 
+\backslash
+@ifundefined{defn}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
 theoremstyle{plain}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 newtheorem{defnzh}{定义}[chapter]
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewenvironment{defn}{
 \backslash
@@ -164,7 +192,7 @@ end{defnzh}}
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewcommand{
 \backslash
@@ -177,25 +205,33 @@ arabic{defnzh}}
 
 \begin_layout Plain Layout
 
+}
 \end_layout
 
 \begin_layout Plain Layout
 
 
+\backslash
+@ifundefined{cor}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
 theoremstyle{plain}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 newtheorem{corzh}{推论}[chapter]
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewenvironment{cor}{
 \backslash
@@ -206,7 +242,7 @@ end{corzh}}
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewcommand{
 \backslash
@@ -219,25 +255,33 @@ arabic{corzh}}
 
 \begin_layout Plain Layout
 
+}
 \end_layout
 
 \begin_layout Plain Layout
 
 
+\backslash
+@ifundefined{lem}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
 theoremstyle{plain}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 newtheorem{lemzh}{引理}[chapter]
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewenvironment{lem}{
 \backslash
@@ -248,7 +292,7 @@ end{lemzh}}
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewcommand{
 \backslash
@@ -261,25 +305,33 @@ arabic{lemzh}}
 
 \begin_layout Plain Layout
 
+}
 \end_layout
 
 \begin_layout Plain Layout
 
 
+\backslash
+@ifundefined{conjecture}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
 \backslash
 theoremstyle{plain}
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 newtheorem{conjecturezh}{猜想}[chapter]
 \end_layout
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewenvironment{conjecture}{
 \backslash
@@ -290,7 +342,7 @@ end{conjecturezh}}
 
 \begin_layout Plain Layout
 
-
+  
 \backslash
 renewcommand{
 \backslash
@@ -303,6 +355,7 @@ arabic{conjecturezh}}
 
 \begin_layout Plain Layout
 
+}
 \end_layout
 
 \begin_layout Plain Layout
@@ -312,6 +365,13 @@ arabic{conjecturezh}}
 renewcommand{
 \backslash
 proofname}{证明}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
 \end_layout
 
 \end_inset

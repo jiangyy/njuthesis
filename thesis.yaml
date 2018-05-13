@@ -2,7 +2,8 @@
 # 修改后运行run.py更新。需要关闭LyX文档再打开以生效。
 
 # 目录设置
-directory: ./example/ # 论文所在工作目录
+directory: ./example/ # 论文所在工作目录 
+                      # 需要有abstract-en.lyx (英文摘要)和abstract-cn.lyx (中文摘要)
 
 # 排版设置
 font-song: SimSun     # 宋体(正文)字体
