@@ -6,7 +6,7 @@ yfile = 'thesis.yaml' if len(sys.argv) == 1 else sys.argv[1]
 meta = yaml.load(open(yfile))
 
 os.system("rm -rf build/*; mkdir -p build/")
-os.system("cp frontmatter/*.lyx build/; cp thesis.layout build/")
+os.system("cp res/*.lyx build/; cp res/thesis.layout build/")
 
 def gen(fname):
     with open("build/%s" % fname) as fp:
@@ -24,5 +24,5 @@ def gen(fname):
     with open("build/%s" % fname, "w") as fp:
         fp.write(contents)
 
-for f in ['thesis.layout', 'titlepage.lyx', 'abstract.lyx', 'frontmatter.lyx']:
+for f in ['thesis.layout', 'grad.lyx']:
     gen(f)

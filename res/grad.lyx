@@ -1,10 +1,10 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass ../build/thesis
+\textclass thesis
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -21,6 +21,8 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format pdf4
 \output_sync 0
@@ -50,6 +52,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -65,7 +68,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation 2em
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -79,7 +85,316 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+证明环境
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@ifundefined{thm}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newtheorem{thmzh}{定理}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewenvironment{thm}{
+\backslash
+begin{thmzh}}{
+\backslash
+end{thmzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewcommand{
+\backslash
+thethmzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{thmzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@ifundefined{defn}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newtheorem{defnzh}{定义}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewenvironment{defn}{
+\backslash
+begin{defnzh}}{
+\backslash
+end{defnzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewcommand{
+\backslash
+thedefnzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{defnzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@ifundefined{cor}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newtheorem{corzh}{推论}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewenvironment{cor}{
+\backslash
+begin{corzh}}{
+\backslash
+end{corzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewcommand{
+\backslash
+thecorzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{corzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@ifundefined{lem}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newtheorem{lemzh}{引理}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewenvironment{lem}{
+\backslash
+begin{lemzh}}{
+\backslash
+end{lemzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewcommand{
+\backslash
+thelemzh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{lemzh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+@ifundefined{conjecture}{}{
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+theoremstyle{plain}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+newtheorem{conjecturezh}{猜想}[chapter]
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewenvironment{conjecture}{
+\backslash
+begin{conjecturezh}}{
+\backslash
+end{conjecturezh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+renewcommand{
+\backslash
+theconjecturezh}{
+\backslash
+arabic{chapter}.
+\backslash
+arabic{conjecturezh}}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+proofname}{证明}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+中英文标题页
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
+\align center
 \begin_inset Float figure
 placement H
 wide false
@@ -682,7 +997,37 @@ status open
 
 
 \backslash
-null
+frontmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{fancy}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+headrulewidth}{0pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyfoot{}
 \end_layout
 
 \end_inset
@@ -913,6 +1258,677 @@ status open
 \noindent
 \align left
 \begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size larger
+\emph on
+\uuline on
+南京大学研究生毕业论文中文摘要首页用纸
+\size default
+\emph default
+\uuline default
+
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+useKaiTi{
+\end_layout
+
+\end_inset
+
+毕业论文题目：
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- title-cn -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\bar under
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- subject-cn -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\bar default
+专业
+\bar under
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+~~-{{- grade -}}-~~
+\end_layout
+
+\end_inset
+
+
+\bar default
+级
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- degree-cn -}}-
+\end_layout
+
+\end_inset
+
+生
+\begin_inset space \enskip{}
+\end_inset
+
+姓名：
+\bar under
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+~~-{{- author-cn -}}-~~
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+指导教师(姓名、职称)：
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- supervisor-cn -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\bar default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+\size large
+摘
+\begin_inset space \quad{}
+\end_inset
+
+要
+\series default
+\size default
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../-{{-directory-}}-/abstract-cn.lyx"
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+关键词：
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- keywords-cn -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\size larger
+\emph on
+\uuline on
+南京大学研究生毕业论文英文摘要首页用纸
+\size default
+\emph default
+\uuline default
+
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+THESIS: 
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- title-en -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+SPECIALIZATION: 
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- subject-en -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+POSTGRADUATE: 
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- author-en -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+MENTOR: 
+\bar under
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- supervisor-en -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+\size large
+Abstract
+\series default
+\size default
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand input
+filename "../-{{-directory-}}-/abstract-en.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Keywords
+\series default
+: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+-{{- keywords-en -}}-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+目录、插图/表格列表
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+chaptermark}[1]{
+\backslash
+markboth{#1}{}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+headrulewidth}{0.4pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand{
+\backslash
+pgnum}{
+\backslash
+textbf{
+\backslash
+thepage}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RO]{
+\backslash
+pgnum}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[LO]{
+\backslash
+useKaiTi{
+\backslash
+rightmark}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[LE]{
+\backslash
+pgnum}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyhead[RE]{
+\backslash
+useKaiTi{
+\backslash
+leftmark}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancyfoot{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+fancypagestyle{plain}{
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fancyhf{}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fancyhead[RO]{
+\backslash
+pgnum}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fancyhead[LO]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+fancyhead[LE]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+fancyhead[RE]{}
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+fancyfoot{}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoffigures
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+listoftables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+正文格式设置
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mainmatter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+chaptermark}[1]{
+\backslash
+markboth{第
+\backslash
+CJKnumber{
+\backslash
+thechapter}章~#1}{}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+sectionmark}[1]{
+\backslash
+markright{
+\backslash
+thesection~#1}}
+\end_layout
+
 \end_inset
 
 

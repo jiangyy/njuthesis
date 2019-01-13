@@ -87,25 +87,7 @@
 status open
 
 \begin_layout Plain Layout
-注意：需要先运行run.py脚本
-\end_layout
-
-\begin_layout Plain Layout
-脚本会生成：
-\end_layout
-
-\begin_layout Plain Layout
-1.
- build/thesis.layout，LyX格式文件
-\end_layout
-
-\begin_layout Plain Layout
-2.
- build/xxx.lyx，包含标题页和摘要页
-\end_layout
-
-\begin_layout Plain Layout
-全局宏定可以定义在一个公共文件，然后在每个引用宏的文件里input。
+先运行run.py脚本生成必要的文件，才能编译
 \end_layout
 
 \end_inset
@@ -116,7 +98,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand input
-filename "../build/frontmatter.lyx"
+filename "../build/grad.lyx"
 
 \end_inset
 
